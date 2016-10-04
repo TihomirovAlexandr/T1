@@ -1,0 +1,94 @@
+body,html{
+	margin:0 auto;
+	width:100%;
+	height:100%;
+	font-family: "Lato", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size:0.94em;
+	background: url('1.jpg') no-repeat fixed center;
+}
+h2{
+	margin-top:50px;
+	text-align:center;
+	color:#8d8d8d;
+}
+.Tadd{
+	width: 700px;
+	height: 437px;
+	margin:50px auto;
+	background: url('2.jpg') no-repeat;
+	border:4px dashed #100580;
+}
+.Bcheckstatus{
+	width: 700px;
+	height: 438px;
+	margin:50px auto;
+	margin-bottom:394px;
+	background: url('3.jpg') no-repeat;
+	border:4px dashed #100580;
+}
+.Bcheckstatus h2{
+	margin-top:10px;
+	text-align:center;
+	color:#8d8d8d;
+}
+.Add{
+	margin:100px auto;
+}
+.Add #pole2{
+	width: 190px;
+	height: 25px;
+}
+.Add #pole1{
+	width: 50px;
+	height: 25px;
+}
+.Add #buttonAdd{
+	width: 50px;
+	height: 25px;
+}
+form{
+	text-align:center;
+}
+#pole1{
+	border:2px solid #100580;
+}
+#pole2{
+	border:2px solid #100580;
+}
+#buttonAdd{
+	border:2px solid #100580;
+	background:linear-gradient(to bottom, #696765, #c4c4c4);
+}
+#buttonAdd:hover{
+	border-color:#7bea83;
+	font-weight: 600;
+}
+.item{
+	display:flex;
+	justify-content:flex-start;
+	margin-left:4%;
+	margin-top:3%;
+	color:white;
+}
+.item input{
+	width: 25px;
+	height: 25px;
+	margin:0 5%;
+}
+.item button{
+	width: 65px;
+	height: 25px;
+	margin:0 5%;
+	border:2px solid #100580;
+	background:linear-gradient(to bottom, #696765, #c4c4c4);
+}
+.item button:hover{
+	border-color:#7bea83;
+	font-weight: 600;
+}
+.item span{
+	width: 40px;
+	height: 25px;
+	margin:0 5%;
+}
+

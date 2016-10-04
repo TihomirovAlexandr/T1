@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>srts</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="JS.JQuery3.1.0/jquery-3.1.0.js"></script>
+	<script src="JS.JQuery3.1.0/sc.js"></script>
+</head>
+<body>
+	<div class="Tadd" id="add">
+		<h2>Add Task</h2>
+		<div class="Add">
+			<form>
+				<input id="pole1" type="text" placeholder="TimeS">
+				<input id="pole2" type="text" placeholder="Task">
+				<input id="buttonAdd" type="button" class="badd"  value="add">
+			</form>
+		</div>
+	</div>
+	<div class="Bcheckstatus">
+		<h2>Execution Tasks</h2>
+		<div id="tabl"></div>
+	</div>
+	<script>
+var time = document.getElementById('pole1');
+var text = document.getElementById('pole2');
+var button = document.getElementById('buttonAdd');
+var tabl = document.getElementById('tabl');
+	var arr = [];
+	var i = 0;
+
+	button.addEventListener ('click', function() {
+		if (!text.value) {
+		return;
+		}
+		itemAdd(tabl, text.value);
+		});
+
+	function itemAdd(element, text) {
+		var checkbox = document.createElement ('input');
+		var all = document.createElement('div');
+		var Timer = document.createElement('span');
+		var Bdelete = document.createElement('button');
+		checkbox.type = "checkbox";
+		Bdelete.textContent = 'Delete';
+		Timer.textContent = time.value;
+		Bdelete.setAttribute('onClick', 'itemDelete(this)');
+
+	function timer(){
+		var obj = Timer;
+		obj.innerHTML--;
+			if (obj.innerHTML==0){
+				setTimeout(function(){},1000);
+				checkbox.checked = true;
+			} else {
+			setTimeout(timer,1000);
+			}
+			}
+			setTimeout(timer,1000);
+
+		all.classList.add('item');
+		all.appendChild(checkbox);
+		all.appendChild(document.createTextNode(text));
+		all.appendChild(Timer);
+		all.appendChild(Bdelete);
+		tabl.appendChild(all);
+
+		arr[i] = document.getElementsByClassName("item");
+		i++;
+
+			}
+
+	function itemDelete(btn) {
+		btn.parentNode.remove();
+			}
+	</script>
+</body>
+</html>
